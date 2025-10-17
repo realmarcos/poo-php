@@ -9,7 +9,7 @@ class Carro
     public $km;
     public $velocidadeAtual;
 
-    public function __constructor($cor, $marca, $tipo, $km) // CONSTRUTOR (EXECUTA AO INSTÂNCIAR UM NOVO OBJETO)
+    public function __construct($cor, $marca, $tipo, $km) // CONSTRUTOR (EXECUTA AO INSTÂNCIAR UM NOVO OBJETO)
     {
         $this->cor = $cor;
         $this->marca = $marca;
@@ -34,15 +34,17 @@ class Carro
     }
 }
 
-$MeuCarro = new Carro("Cinza", "Fiat", "Sedan", 32000);
+$MeuCarro = new Carro("Cinza", "Fiat", "Sedan", 32000); // Criando objeto carro
 
-$MeuCarro->ligar();
+$MeuCarro->ligar(); // executando método
 echo "<br>";
 $MeuCarro->acelerar(50);
 echo "<br>";
 $MeuCarro->acelerar(20);
 echo "<br>";
 $MeuCarro->frear(40);
+
+echo $MeuCarro->cor;
 
 echo "<br>";
  
