@@ -2,7 +2,6 @@
 
 <?php
 
-
 class Caixa
 {
     public $saldo;
@@ -18,6 +17,7 @@ class Caixa
     {
         echo "O extrato do titular " . $this->titular . " é de R$" . $this->saldo;
         echo "<br>";
+        return $this->saldo;
     }
 
     public function Depositar($valor)
@@ -28,6 +28,7 @@ class Caixa
             $this->saldo += $valor;
             $this->EmitirExtrato();
             echo "<br>";
+            return $this->saldo;
         }
     }
 
@@ -40,14 +41,15 @@ class Caixa
             $this->saldo -= $valor;
             $this->EmitirExtrato();
             echo "<br>";
+            return $this->saldo;
         }
     }
 }
 
-$minhaConta = new Caixa("Marcos");
+// $minhaConta = new Caixa("Marcos");
 
-$minhaConta->EmitirExtrato();
-$minhaConta->Depositar(1000);
-$minhaConta->Sacar(500);
+// $minhaConta->EmitirExtrato();
+// $minhaConta->Depositar(1000);
+// $minhaConta->Sacar(500);
 
 ?>
