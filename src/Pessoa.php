@@ -47,19 +47,20 @@ class Estudante extends Pessoa
 }
 
 
-function adicionarPessoa($pessoa) {
+function adicionarPessoa($pessoa)
+{
     global $pessoaIFTO;
     $pessoaIFTO[] = $pessoa;
 }
 
 $fulano1 = new Estudante("Ana", 20, "2023001");
+$fulano2 = new Estudante("João", 30, "2023002");
 
 adicionarPessoa($fulano1);
+adicionarPessoa($fulano2);
 
+echo "Lista de Pessoas no IFTO:";
 foreach ($pessoaIFTO as $pessoa) {
     echo "<br>";
-    if ($pessoa instanceof Estudante) {
-        echo $pessoa->nome;
-        echo "<br>";
-    }
+    echo $pessoa->nome;
 }
