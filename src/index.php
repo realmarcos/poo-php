@@ -10,6 +10,7 @@
 <body>
     <a href="./Caixa.php">Caixa</a>
     <a href="./Carros.php">Carros</a>
+    <a href="./Pessoa.php">Pessoas</a>
 </body>
 
 </html>
