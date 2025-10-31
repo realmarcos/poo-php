@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -8,9 +8,9 @@
 </head>
 
 <body>
-    <a href="./Caixa.php">Caixa</a>
-    <a href="./Carros.php">Carros</a>
-    <a href="./Pessoa.php">Pessoas</a>
+    <a href="./src/Caixa.php">Caixa</a>
+    <a href="./src/Carros.php">Carros</a>
+    <a href="./src/Pessoa.php">Pessoas</a>
 </body>
 
 </html>
