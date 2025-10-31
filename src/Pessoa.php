@@ -2,6 +2,9 @@
 
 //* 1° Abstração: classe pai PESSOA, demais classes ESTUDANTE, PROFESSOR, SERVIDOR, VISITANTE
 
+//* Array para armazenar objetos do tipo Pessoa
+$pessoaIFTO = [];
+
 class Pessoa
 {
     //* 2° Encapsulamento: atributos com visibilidade public e protected
@@ -43,8 +46,20 @@ class Estudante extends Pessoa
     }
 }
 
-$fulano = new Estudante("Marcos", 30, 12345);
 
-echo $fulano->nome; // Acesso permitido
-echo "<br>";
-echo $fulano->apresentar(); // Acesso negado, pois é protected
+function adicionarPessoa($pessoa) {
+    global $pessoaIFTO;
+    $pessoaIFTO[] = $pessoa;
+}
+
+$fulano1 = new Estudante("Ana", 20, "2023001");
+
+adicionarPessoa($fulano1);
+
+foreach ($pessoaIFTO as $pessoa) {
+    echo "<br>";
+    if ($pessoa instanceof Estudante) {
+        echo $pessoa->nome;
+        echo "<br>";
+    }
+}
